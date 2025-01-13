@@ -15,6 +15,7 @@ st.subheader("Summarize Content from a URL or Uploaded PDF")
 
 # Sidebar: API Key Inputs
 with st.sidebar:
+    st.write("get your groq api key from https://groq.com/ and get your langsmith api key from https://langsmith.com/")
     groq_api_key = st.text_input("Groq API Key", value="", type="password")
     langsmith_api_key = st.text_input("LangSmith API Key", value="", type="password")  # LangSmith API Key
 
