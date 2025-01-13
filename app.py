@@ -50,7 +50,11 @@ Please refine the current summary to include the new information while maintaini
 refinement_prompt = PromptTemplate(template=refinement_prompt_template, input_variables=["existing_answer", "text"])
 
 # Initialize LLM with Groq API Key
-llm = ChatGroq(model="gemma2-9b-it", groq_api_key=groq_api_key)
+if groq_api_key:
+    try:
+        llm = ChatGroq(model="gemma2-9b-it", groq_api_key=groq_api_key)
+    except Exception as e:
+        st.error(f"Failed to initialize Groq client: {e}")
 
 # Button to Summarize Content
 if st.button("Summarize the Content"):
