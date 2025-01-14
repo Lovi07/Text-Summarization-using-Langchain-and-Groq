@@ -1,3 +1,11 @@
+---
+license: mit
+title: Text_Summarization
+sdk: streamlit
+emoji: 👀
+short_description: Summarize pdfs, yt urls, web urls
+sdk_version: 1.41.1
+---
 **LangChain: Summarize Text from YouTube, Websites, or PDF**
 This Streamlit app allows you to summarize content from various sources like YouTube videos, websites, or uploaded PDF files. The app uses LangChain, Groq, and LangSmith to process and summarize content.
 
